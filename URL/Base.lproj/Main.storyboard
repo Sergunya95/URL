@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="URL" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lZA-BW-jch">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Download an Image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3q-Nt-B3t">
+                                <rect key="frame" x="20" y="44" width="374" height="830"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="42"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uiL-uj-OPI">
+                                <rect key="frame" x="20" y="44" width="374" height="830"/>
+                                <connections>
+                                    <action selector="getImagePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vfV-ic-mPe"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="r9G-7E-Ibe">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r9G-7E-Ibe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Cl-Xh-gk5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="M3q-Nt-B3t" secondAttribute="trailing" constant="20" id="6dE-rg-R6h"/>
+                            <constraint firstAttribute="bottom" secondItem="uiL-uj-OPI" secondAttribute="bottom" constant="22" id="7KP-rU-ECt"/>
+                            <constraint firstItem="lZA-BW-jch" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zi-xQ-qJk"/>
+                            <constraint firstItem="uiL-uj-OPI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="APM-kW-jvN"/>
+                            <constraint firstItem="lZA-BW-jch" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CLy-vP-v8t"/>
+                            <constraint firstItem="uiL-uj-OPI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Q5C-Rk-VT3"/>
+                            <constraint firstAttribute="bottom" secondItem="lZA-BW-jch" secondAttribute="bottom" id="YzG-wC-dcU"/>
+                            <constraint firstItem="lZA-BW-jch" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eZx-hM-Usn"/>
+                            <constraint firstItem="M3q-Nt-B3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fZW-vc-1qk"/>
+                            <constraint firstItem="r9G-7E-Ibe" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lYX-OI-7wi"/>
+                            <constraint firstAttribute="bottom" secondItem="M3q-Nt-B3t" secondAttribute="bottom" constant="22" id="qTx-6G-q1f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uiL-uj-OPI" secondAttribute="trailing" constant="20" id="ufK-qa-1Fq"/>
+                            <constraint firstItem="M3q-Nt-B3t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yJF-jP-jv4"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="r9G-7E-Ibe" id="35R-uH-qh0"/>
+                        <outlet property="getImageButton" destination="uiL-uj-OPI" id="QGt-ik-Y5b"/>
+                        <outlet property="imageView" destination="lZA-BW-jch" id="gJy-zC-sXo"/>
+                        <outlet property="label" destination="M3q-Nt-B3t" id="s45-Kq-eK3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="93.75"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
